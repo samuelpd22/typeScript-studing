@@ -4,7 +4,6 @@ let dados = {
     idade: 23,
     status: "A",
     ola: () => { console.log("Eu sou uma função(METODO) dentro do objeto!"); },
-    info: (p) => { console.log(p); }
 };
 console.log(dados);
 console.log(typeof (dados));
@@ -15,5 +14,4 @@ dados.nome = "Lara";
 dados.idade = 18;
 dados.status = "B";
 dados.ola();
-dados.info(dados.nome);
 console.log(dados);

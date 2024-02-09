@@ -8,7 +8,7 @@ let dados={ //Forma de declarar objeto , que deu certo!
     idade:23,
     status:"A",
     ola:() => {console.log("Eu sou uma função(METODO) dentro do objeto!")},
-    info:(p) => {console.log(p)}//Metodo do tipo STRING que retorna um dado
+   // info:(p) => {console.log(p)}//Metodo do tipo STRING que retorna um dado
     //inserido
 };
 
@@ -22,7 +22,7 @@ dados.nome = "Lara";
 dados.idade = 18;
 dados.status = "B";
 dados.ola();
-dados.info(dados.nome);
+//dados.info(dados.nome);
 
 
 console.log(dados);
