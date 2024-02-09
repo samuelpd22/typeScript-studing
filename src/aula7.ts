@@ -1,4 +1,8 @@
 let coisas:[string , number]=["samuel",22];// Tuplas, definimos para atribuir depois.
+
+let coisas2:readonly[string , number]=["samuel",22];//Apenas para vizualização.
+
+
 coisas[1]= 4;//Vai atribuir o valor a posição que informei dentro do Array[]<<<
 
 console.log(coisas);//Imprimi tudo
