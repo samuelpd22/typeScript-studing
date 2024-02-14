@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/strip-bom": "^4.0.1",
+    "@types/strip-json-comments": "^3.0.0",
+    "ts-node-dev": "^2.0.0"
+  }
+}
