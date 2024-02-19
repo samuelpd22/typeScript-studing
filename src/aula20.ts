@@ -13,6 +13,13 @@ class ContaPfisica extends Conta0 { //extends indica que estão herdando tudo qu
 
     
 }
+class ContaPJuridica extends Conta0 { 
+
+    
+}
+const contPJ = new ContaPJuridica(59912,"Lara");
+console.log(contPJ.titular);
+console.log(contPJ.numero);
 
 const conta1 = new ContaPfisica(24422,"Samuel"); //Herdou já o construtor do CONTA0! CLASSE PAI.
 console.log(conta1.titular);
