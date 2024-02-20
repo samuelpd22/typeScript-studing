@@ -1,10 +1,16 @@
+//Public - Acessado de qualquer local.
+//Private - Acessado somente na propria classe.
+//Protected - Acessado somente nas classes filhas e sua propria classe.
+
 class Conta0 { // Boas praticas, classes sempre com a primeira letra MAICUSCULA
    protected numero:number;
    protected titular:string;
+   protected saldoConta:number;
 
     constructor(titular:string){ //Estão em escopos diferentes!!  
         this.numero = this.gerarNumeroConta();
         this.titular = titular; //Apontando diretamente para classe, pelo "THIS"
+        this.saldoConta = 0;
         
     }
     private gerarNumeroConta():number {
@@ -13,7 +19,20 @@ class Conta0 { // Boas praticas, classes sempre com a primeira letra MAICUSCULA
     info(){
         console.log(`Titular: ${this.titular}`)
         console.log(`Numero: ${this.numero}`)
-        console.log("-------------------------")
+       
+    }
+    public saldo():number{
+        return this.saldoConta;
+    }
+    protected deposito(valor:number){
+        this.saldoConta+=valor; 
+    }
+    protected saque(valor:number){
+        if(valor >= this.saldoConta){
+            this.saldoConta-valor;
+        } else {
+            console.log("Saldo insuficiente");
+        }
     }
 }
 
@@ -24,6 +43,18 @@ class ContaPfisica extends Conta0 { //extends indica que estão herdando tudo qu
         this.cpf = cpf;
         console.log(`Conta Fisica criada!${titular}`)// Metodos para obter variavel PRIVATE
     }
+    info(){
+        super.info()
+        console.log(`CPF....:${this.cpf}`);
+        console.log("-------------------------")
+    }
+    public deposito(valor:number){
+        if(valor > 1000){
+            console.log("Valor de deposito muito grande para esse tipo de conta.")
+        } else {
+            super.deposito(valor)
+        }
+    }
     
 }
 class ContaPJuridica extends Conta0 { 
@@ -33,7 +64,18 @@ class ContaPJuridica extends Conta0 {
         this.cnpj = cnpj;
         console.log(`Conta PJ criada!${titular}`)
     }
-    
+    info(){
+        super.info()
+        console.log(`CNPJ...:${this.cnpj}`);
+        console.log("-------------------------")
+    }
+    public deposito(valor:number){
+        if(valor > 10000){
+            console.log("Valor de deposito muito grande para esse tipo de conta.")
+        } else {
+            super.deposito(valor)
+        }
+    }
 }
 const contPJ = new ContaPJuridica(131333,"Lara");
 /*console.log("Nome titular: " +contPJ.titular);
@@ -45,5 +87,8 @@ const conta1 = new ContaPfisica(121313133,"Samuel"); //Herdou já o construtor d
 console.log("Numero conta:" + conta1.numero);
 console.log("CPF: "+ conta1.cpf);*/
 
-conta1.info();
-contPJ.info();//Posso utilizar,pois este metodo vem da classe PAI!
+//conta1.info();
+//contPJ.info();//Posso utilizar,pois este metodo vem da classe PAI!
+conta1.deposito(400);
+console.log(conta1.saldo());
+
