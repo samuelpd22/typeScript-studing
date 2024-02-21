@@ -21,9 +21,13 @@ class Conta0 { // Boas praticas, classes sempre com a primeira letra MAICUSCULA
         console.log(`Numero: ${this.numero}`)
        
     }
-    public saldo():number{
-        return this.saldoConta;
+    get saldo():number{
+        return this.saldo;
     }
+    set saldo(saldoConta:number){
+      this.saldoConta=saldoConta;
+    }
+
     protected deposito(valor:number){
         if(valor < 0){
             console.log("Valor invalido");
@@ -116,5 +120,6 @@ console.log("CPF: "+ conta1.cpf);*/
 //contPJ.info();//Posso utilizar,pois este metodo vem da classe PAI!
 conta1.deposito(1000);
 conta1.saque2(2);
-console.log(conta1.saldo());
+conta1.saldo=250;
+console.log(conta1.saldo);
 
