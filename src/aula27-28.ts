@@ -1,12 +1,15 @@
-let curso1:cursosInter;
-let curso2:cursosInter; //Já especificando que vamos utilizar a estrutura de INTERFACE!
-let curso3
+let curso1:cursoProgramacao;
+let curso2:cursoProgramacao;
+let curso3:cursoArtes;
+
+
 interface cursosInter{ //Agora posso criar infinitos elementos usando essa interface
     titulo:string,
     des:string,
     nAulas:number,
     nMaxAlunos:number
 };
+
 
             //UTILIZANDO O OBJETO
 let cursos1:{   
@@ -38,9 +41,7 @@ interface cursoArtes extends cursosInter{
     maxAlunos?:number;
 
 }
-let curso1p:cursoProgramacao;
-let curso2p:cursoProgramacao;
-let curso3p:cursoArtes;
+
 
 
 console.log(curso1);

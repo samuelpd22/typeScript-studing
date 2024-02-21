@@ -16,8 +16,5 @@ curso2 = {
     nAulas: 200,
     nMaxAlunos: 50,
 };
-let curso1p;
-let curso2p;
-let curso3p;
 console.log(curso1);
 console.log(curso2);
