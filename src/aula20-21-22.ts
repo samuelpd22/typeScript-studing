@@ -25,15 +25,26 @@ class Conta0 { // Boas praticas, classes sempre com a primeira letra MAICUSCULA
         return this.saldoConta;
     }
     protected deposito(valor:number){
+        if(valor < 0){
+            console.log("Valor invalido");
+            return
+        } 
         this.saldoConta+=valor; 
     }
     protected saque(valor:number){
-        if(valor >= this.saldoConta){
-            this.saldoConta-valor;
+        if(valor < 0){
+            console.log("Valor invalido");
+            return
+        } 
+        if(valor <= this.saldoConta){
+            this.saldoConta-=valor;
         } else {
             console.log("Saldo insuficiente");
         }
     }
+   
+
+   
 }
 
 class ContaPfisica extends Conta0 { //extends indica que estão herdando tudo que está em Conta0!
@@ -53,6 +64,13 @@ class ContaPfisica extends Conta0 { //extends indica que estão herdando tudo qu
             console.log("Valor de deposito muito grande para esse tipo de conta.")
         } else {
             super.deposito(valor)
+        }
+    }
+     public saque2(valor:number){
+        if(valor > 1000){
+            console.log("Valor de saque muito grande para o limite da conta");
+        } else {
+            super.saque(valor);
         }
     }
     
@@ -76,6 +94,13 @@ class ContaPJuridica extends Conta0 {
             super.deposito(valor)
         }
     }
+    public saque2(valor:number){
+        if(valor > 10000){
+            console.log("Valor de saque muito grande para o limite da conta");
+        } else {
+            super.saque(valor);
+        }
+    }
 }
 const contPJ = new ContaPJuridica(131333,"Lara");
 /*console.log("Nome titular: " +contPJ.titular);
@@ -89,6 +114,7 @@ console.log("CPF: "+ conta1.cpf);*/
 
 //conta1.info();
 //contPJ.info();//Posso utilizar,pois este metodo vem da classe PAI!
-conta1.deposito(400);
+conta1.deposito(1000);
+conta1.saque2(2);
 console.log(conta1.saldo());
 
