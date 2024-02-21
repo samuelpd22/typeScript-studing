@@ -26,8 +26,23 @@ curso2={
     titulo:"Java",
     des:"Curso de Java", 
     nAulas:200,
-    nMaxAlunos:50
+    nMaxAlunos:50,
 }
+interface cursoProgramacao extends cursosInter{ //TUDO QUE ESTIVER EM cursoInter VALE PARA cursoProgramacao.
+    aulas:number;
+    maxAlunos?:number;
+
+}
+interface cursoArtes extends cursosInter{ 
+    aulas:number;
+    maxAlunos?:number;
+
+}
+let curso1p:cursoProgramacao;
+let curso2p:cursoProgramacao;
+let curso3p:cursoArtes;
+
+
 console.log(curso1);
 console.log(curso2);//Utilizando uma interface 
 
