@@ -1,0 +1,16 @@
+"use strict";
+let nvalor;
+let svalor;
+let uvalor;
+nvalor = 10;
+svalor = "Samuel";
+uvalor = 11;
+nvalor = uvalor;
+svalor = uvalor;
+nvalor = svalor;
+console.log(typeof (nvalor));
+console.log(typeof (svalor));
+console.log(typeof (uvalor));
+nvalor = Number.parseInt(svalor);
+nvalor = 10;
+svalor = nvalor.toString();
