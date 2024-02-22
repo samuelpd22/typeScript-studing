@@ -1,4 +1,4 @@
-let curso1:cursoProgramacao;
+/*let curso1:cursoProgramacao;
 let curso2:cursoProgramacao;
 let curso3:cursoArtes;
 
@@ -48,4 +48,4 @@ console.log(curso1);
 console.log(curso2);//Utilizando uma interface 
 
 
-
+*/
