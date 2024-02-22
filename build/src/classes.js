@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Pessoa = void 0;
+exports.objeto = exports.Pessoa = void 0;
 class Pessoa {
     nome;
     altura;
@@ -16,3 +16,4 @@ class objeto {
         this.nome = nome;
     }
 }
+exports.objeto = objeto;

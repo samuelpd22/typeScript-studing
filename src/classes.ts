@@ -6,7 +6,7 @@ export class Pessoa{ //NECESSITO EXPORTAR AQUI , E IMPORTAR ONDE FOR
         this.altura = altura;
     }
 }
-class objeto{
+export class objeto{
     nome:string;
     constructor(nome:string){
         this.nome = nome;
