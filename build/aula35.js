@@ -20,3 +20,13 @@ let { cor1, cor2, cor3, cor4 } = objv2;
 console.log(cor3);
 console.log(cor1);
 console.log(cor2);
+let [nu1 = 0, nu2 = 0, ...nu3] = [10, 20, 24, 24, 52, 54, 64, 73, 53];
+console.log(nu1, nu2, nu3);
+const Zcores = () => {
+    return ["Verde", "Amarelo", "Azul", "Branco"];
+};
+let [co1, co2, co3, co4] = Zcores();
+console.log(co1, co2, co3, co4);
+let texto = "Curso de typescript";
+let [...t] = texto.split(" ");
+console.log(t);
