@@ -1,3 +1,5 @@
+export const coisas=["Corda","Pilha","Lampada","Chave"];
+
 export class Pessoa{ //NECESSITO EXPORTAR AQUI , E IMPORTAR ONDE FOR
     nome:string;
     altura:number

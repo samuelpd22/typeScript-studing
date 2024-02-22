@@ -5,4 +5,4 @@ const o1 = new Object("Teste");
 const p1 = new classes_1.Pessoa("Samuel", 1.70);
 console.log(p1.altura);
 console.log(p1.altura);
-console.log();
+console.log(classes_1.objeto.name);

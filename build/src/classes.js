@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.objeto = exports.Pessoa = void 0;
+exports.objeto = exports.Pessoa = exports.coisas = void 0;
+exports.coisas = ["Corda", "Pilha", "Lampada", "Chave"];
 class Pessoa {
     nome;
     altura;
